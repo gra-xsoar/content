@@ -5,4 +5,6 @@ ssh-keyscan github.com >> ~/.ssh/known_hosts
 
 if [[ ! -d "content-test-data" ]]; then
     git clone git@github.com:demisto/content-test-data.git
+  else
+    cd content-test-data && git reset --hard && git pull -r
 fi
